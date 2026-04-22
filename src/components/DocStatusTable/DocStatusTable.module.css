@@ -1,0 +1,510 @@
+/**
+ * 文档状态表格样式
+ * 描述：DocStatusTable 组件的样式定义
+ * 作者：AI Assistant
+ * 日期：2026-04-22
+ */
+
+/* 表格容器 */
+.docStatusTable {
+  background: white; /* 背景色 */
+  border: 1px solid #e2e8f0; /* 边框 */
+  border-radius: 12px; /* 圆角 */
+  overflow: hidden; /* 隐藏溢出 */
+  margin: 20px 0; /* 外边距 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* 字体 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* 阴影 */
+}
+
+/* 表头部分 */
+.docStatusHeader {
+  padding: 16px 20px; /* 内边距 */
+  border-bottom: 1px solid #e2e8f0; /* 底部边框 */
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); /* 背景渐变 */
+}
+
+/* 表头顶部 */
+.docStatusHeaderTop {
+  display: flex; /* 弹性布局 */
+  justify-content: space-between; /* 水平分布 */
+  align-items: center; /* 垂直居中 */
+  margin-bottom: 12px; /* 底部边距 */
+}
+
+/* 表格标题 */
+.docStatusTitle {
+  margin: 0; /* 外边距 */
+  font-size: 16px; /* 字体大小 */
+  font-weight: 600; /* 字体粗细 */
+  color: #1e293b; /* 字体颜色 */
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 8px; /* 间距 */
+}
+
+/* 标题图标 */
+.titleIcon {
+  width: 18px; /* 宽度 */
+  height: 18px; /* 高度 */
+  color: #3b82f6; /* 颜色 */
+}
+
+/* 计数徽章 */
+.docStatusCount {
+  font-size: 13px; /* 字体大小 */
+  font-weight: 600; /* 字体粗细 */
+  color: #3b82f6; /* 字体颜色 */
+  background: #eff6ff; /* 背景色 */
+  padding: 4px 10px; /* 内边距 */
+  border-radius: 12px; /* 圆角 */
+}
+
+/* 进度条容器 */
+.docStatusProgress {
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 12px; /* 间距 */
+}
+
+/* 进度条 */
+.docStatusProgressBar {
+  flex: 1; /* 占满剩余空间 */
+  height: 8px; /* 高度 */
+  background: #e2e8f0; /* 背景色 */
+  border-radius: 4px; /* 圆角 */
+  overflow: hidden; /* 隐藏溢出 */
+}
+
+/* 进度条填充 */
+.docStatusProgressFill {
+  height: 100%; /* 高度 */
+  border-radius: 4px; /* 圆角 */
+  transition: width 0.4s ease, background 0.3s ease; /* 过渡效果 */
+}
+
+/* 进度文本 */
+.docStatusProgressText {
+  font-size: 13px; /* 字体大小 */
+  font-weight: 600; /* 字体粗细 */
+  color: #64748b; /* 字体颜色 */
+  min-width: 45px; /* 最小宽度 */
+  text-align: right; /* 文本右对齐 */
+}
+
+/* 项目列表 */
+.docStatusList {
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+}
+
+/* 项目项 */
+.docStatusItem {
+  display: flex; /* 弹性布局 */
+  justify-content: space-between; /* 水平分布 */
+  align-items: center; /* 垂直居中 */
+  padding: 14px 20px; /* 内边距 */
+  border-bottom: 1px solid #f1f5f9; /* 底部边框 */
+  cursor: pointer; /* 鼠标指针 */
+  transition: all 0.2s ease; /* 过渡效果 */
+  position: relative; /* 相对定位 */
+}
+
+/* 最后一个项目项 */
+.docStatusItem:last-child {
+  border-bottom: none; /* 无底部边框 */
+}
+
+/* 项目项悬停效果 */
+.docStatusItem:hover {
+  background: #f8fafc; /* 背景色 */
+}
+
+/* 项目项焦点效果 */
+.docStatusItem:focus {
+  outline: none; /* 无轮廓 */
+  background: #f0f9ff; /* 背景色 */
+}
+
+/* 项目项左侧状态条 */
+.docStatusItem::before {
+  content: ''; /* 内容 */
+  position: absolute; /* 绝对定位 */
+  left: 0; /* 左对齐 */
+  top: 0; /* 顶部对齐 */
+  bottom: 0; /* 底部对齐 */
+  width: 3px; /* 宽度 */
+  transition: all 0.2s ease; /* 过渡效果 */
+}
+
+/* 待完成状态条 */
+.rowStatusPending::before {
+  background: #94a3b8; /* 背景色 */
+}
+
+/* 进行中状态条 */
+.rowStatusInProgress::before {
+  background: #f59e0b; /* 背景色 */
+}
+
+/* 已完成状态条 */
+.rowStatusCompleted::before {
+  background: #10b981; /* 背景色 */
+}
+
+/* 动画效果 */
+.docStatusItem.animating {
+  animation: itemPulse 0.3s ease; /* 动画 */
+}
+
+/* 脉冲动画 */
+@keyframes itemPulse {
+  0% { transform: scale(1); } /* 开始状态 */
+  50% { transform: scale(1.01); background: #f0f9ff; } /* 中间状态 */
+  100% { transform: scale(1); } /* 结束状态 */
+}
+
+/* 项目项左侧内容 */
+.docStatusItemLeft {
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 14px; /* 间距 */
+  flex: 1; /* 占满剩余空间 */
+  min-width: 0; /* 最小宽度 */
+}
+
+/* 状态图标容器 */
+.statusIconWrapper {
+  width: 36px; /* 宽度 */
+  height: 36px; /* 高度 */
+  border-radius: 10px; /* 圆角 */
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  flex-shrink: 0; /* 不收缩 */
+  transition: all 0.2s ease; /* 过渡效果 */
+}
+
+/* 状态图标 */
+.statusIconWrapper svg {
+  width: 20px; /* 宽度 */
+  height: 20px; /* 高度 */
+}
+
+/* 待完成状态图标 */
+.statusIconWrapper.statusPending {
+  background: #f1f5f9; /* 背景色 */
+  color: #94a3b8; /* 颜色 */
+}
+
+/* 进行中状态图标 */
+.statusIconWrapper.statusInProgress {
+  background: #fef3c7; /* 背景色 */
+  color: #f59e0b; /* 颜色 */
+}
+
+/* 已完成状态图标 */
+.statusIconWrapper.statusCompleted {
+  background: #d1fae5; /* 背景色 */
+  color: #10b981; /* 颜色 */
+}
+
+/* 状态图标悬停效果 */
+.docStatusItem:hover .statusIconWrapper {
+  transform: scale(1.1); /* 缩放 */
+}
+
+/* 项目项内容 */
+.docStatusItemContent {
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+  gap: 2px; /* 间距 */
+  min-width: 0; /* 最小宽度 */
+}
+
+/* 项目项头部 */
+.docStatusItemHeader {
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 8px; /* 间距 */
+}
+
+/* 项目项标题 */
+.docStatusItemTitle {
+  font-size: 14px; /* 字体大小 */
+  font-weight: 500; /* 字体粗细 */
+  color: #1e293b; /* 字体颜色 */
+  transition: all 0.2s ease; /* 过渡效果 */
+}
+
+/* 已完成项目标题 */
+.docStatusItemTitle.completed {
+  text-decoration: line-through; /* 删除线 */
+  color: #94a3b8; /* 字体颜色 */
+}
+
+/* 展开按钮 */
+.expandButton {
+  width: 20px; /* 宽度 */
+  height: 20px; /* 高度 */
+  border: none; /* 无边框 */
+  background: transparent; /* 透明背景 */
+  cursor: pointer; /* 鼠标指针 */
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  padding: 0; /* 内边距 */
+  border-radius: 4px; /* 圆角 */
+  transition: all 0.2s ease; /* 过渡效果 */
+  color: #94a3b8; /* 颜色 */
+}
+
+/* 展开按钮悬停效果 */
+.expandButton:hover {
+  background: #f1f5f9; /* 背景色 */
+  color: #64748b; /* 颜色 */
+}
+
+/* 展开按钮焦点效果 */
+.expandButton:focus {
+  outline: none; /* 无轮廓 */
+  box-shadow: 0 0 0 2px #3b82f6; /* 阴影 */
+}
+
+/* 展开按钮图标 */
+.expandButton svg {
+  width: 14px; /* 宽度 */
+  height: 14px; /* 高度 */
+  transition: transform 0.3s ease; /* 过渡效果 */
+}
+
+/* 展开状态 */
+.expandButton.expanded svg {
+  transform: rotate(180deg); /* 旋转 180 度 */
+}
+
+/* 项目项描述 */
+.docStatusItemDesc {
+  font-size: 12px; /* 字体大小 */
+  color: #64748b; /* 字体颜色 */
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 隐藏溢出 */
+  text-overflow: ellipsis; /* 省略号 */
+}
+
+/* 详情展开区域 */
+.docStatusDetails {
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); /* 背景渐变 */
+  border-top: 1px dashed #e2e8f0; /* 顶部虚线边框 */
+  animation: slideDown 0.3s ease; /* 动画 */
+}
+
+/* 下滑动画 */
+@keyframes slideDown {
+  from {
+    opacity: 0; /* 透明 */
+    max-height: 0; /* 最大高度 */
+  }
+  to {
+    opacity: 1; /* 不透明 */
+    max-height: 500px; /* 最大高度 */
+  }
+}
+
+/* 详情内容 */
+.docStatusDetailsContent {
+  padding: 16px 20px 16px 70px; /* 内边距 */
+}
+
+/* 详情列表 */
+.docStatusDetailsList {
+  margin: 0; /* 外边距 */
+  padding-left: 20px; /* 左侧内边距 */
+  display: flex; /* 弹性布局 */
+  flex-direction: column; /* 垂直排列 */
+  gap: 8px; /* 间距 */
+}
+
+/* 列表项 */
+.docStatusDetailsList li {
+  font-size: 13px; /* 字体大小 */
+  color: #475569; /* 字体颜色 */
+  line-height: 1.5; /* 行高 */
+  position: relative; /* 相对定位 */
+}
+
+/* 列表项标记 */
+.docStatusDetailsList li::marker {
+  color: #3b82f6; /* 颜色 */
+}
+
+/* 详情段落 */
+.docStatusDetailsContent p {
+  margin: 0; /* 外边距 */
+  font-size: 13px; /* 字体大小 */
+  color: #475569; /* 字体颜色 */
+  line-height: 1.6; /* 行高 */
+}
+
+/* 文件路径 */
+.docStatusItemPath {
+  font-size: 11px; /* 字体大小 */
+  background: #f1f5f9; /* 背景色 */
+  padding: 3px 8px; /* 内边距 */
+  border-radius: 4px; /* 圆角 */
+  color: #64748b; /* 字体颜色 */
+  font-family: 'Monaco', 'Menlo', monospace; /* 等宽字体 */
+  max-width: 180px; /* 最大宽度 */
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 隐藏溢出 */
+  text-overflow: ellipsis; /* 省略号 */
+}
+
+/* 状态徽章 */
+.statusBadge {
+  display: inline-flex; /* 内联弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 5px; /* 间距 */
+  padding: 5px 10px; /* 内边距 */
+  border-radius: 14px; /* 圆角 */
+  font-size: 12px; /* 字体大小 */
+  font-weight: 500; /* 字体粗细 */
+  transition: all 0.2s ease; /* 过渡效果 */
+  white-space: nowrap; /* 不换行 */
+}
+
+/* 状态徽章图标 */
+.statusBadge svg {
+  width: 14px; /* 宽度 */
+  height: 14px; /* 高度 */
+}
+
+/* 待完成状态徽章 */
+.statusBadge.statusPending {
+  background: #f1f5f9; /* 背景色 */
+  color: #64748b; /* 颜色 */
+}
+
+/* 进行中状态徽章 */
+.statusBadge.statusInProgress {
+  background: #fef3c7; /* 背景色 */
+  color: #d97706; /* 颜色 */
+}
+
+/* 已完成状态徽章 */
+.statusBadge.statusCompleted {
+  background: #d1fae5; /* 背景色 */
+  color: #059669; /* 颜色 */
+}
+
+/* 状态徽章悬停效果 */
+.docStatusItem:hover .statusBadge {
+  transform: translateY(-1px); /* 上移 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 阴影 */
+}
+
+/* 页脚 */
+.docStatusFooter {
+  padding: 12px 20px; /* 内边距 */
+  background: #f8fafc; /* 背景色 */
+  border-top: 1px solid #e2e8f0; /* 顶部边框 */
+  display: flex; /* 弹性布局 */
+  justify-content: space-between; /* 水平分布 */
+  align-items: center; /* 垂直居中 */
+  flex-wrap: wrap; /* 换行 */
+  gap: 10px; /* 间距 */
+}
+
+/* 图例 */
+.docStatusLegend {
+  display: flex; /* 弹性布局 */
+  gap: 16px; /* 间距 */
+  flex-wrap: wrap; /* 换行 */
+}
+
+/* 图例项 */
+.legendItem {
+  font-size: 12px; /* 字体大小 */
+  color: #64748b; /* 字体颜色 */
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 6px; /* 间距 */
+}
+
+/* 图例点 */
+.legendDot {
+  width: 8px; /* 宽度 */
+  height: 8px; /* 高度 */
+  border-radius: 50%; /* 圆形 */
+}
+
+/* 提示文本 */
+.docStatusHint {
+  font-size: 12px; /* 字体大小 */
+  color: #94a3b8; /* 字体颜色 */
+  display: flex; /* 弹性布局 */
+  align-items: center; /* 垂直居中 */
+  gap: 4px; /* 间距 */
+}
+
+/* 提示图标 */
+.hintIcon {
+  width: 14px; /* 宽度 */
+  height: 14px; /* 高度 */
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+  /* 表格容器 */
+  .docStatusTable {
+    border-radius: 8px; /* 圆角 */
+    margin: 12px 0; /* 外边距 */
+  }
+
+  /* 表头 */
+  .docStatusHeader {
+    padding: 14px 16px; /* 内边距 */
+  }
+
+  /* 表头顶部 */
+  .docStatusHeaderTop {
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start; /* 左对齐 */
+    gap: 8px; /* 间距 */
+  }
+
+  /* 项目项 */
+  .docStatusItem {
+    padding: 12px 16px; /* 内边距 */
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start; /* 左对齐 */
+    gap: 10px; /* 间距 */
+  }
+
+  /* 项目项左侧 */
+  .docStatusItemLeft {
+    width: 100%; /* 宽度 */
+  }
+
+  /* 项目项右侧 */
+  .docStatusItemRight {
+    width: 100%; /* 宽度 */
+    justify-content: space-between; /* 水平分布 */
+  }
+
+  /* 隐藏文件路径 */
+  .docStatusItemPath {
+    display: none; /* 隐藏 */
+  }
+
+  /* 页脚 */
+  .docStatusFooter {
+    flex-direction: column; /* 垂直排列 */
+    align-items: flex-start; /* 左对齐 */
+    padding: 12px 16px; /* 内边距 */
+  }
+
+  /* 图例 */
+  .docStatusLegend {
+    gap: 12px; /* 间距 */
+  }
+}

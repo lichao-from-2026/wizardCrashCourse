@@ -1,0 +1,367 @@
+---
+title: AI Agent 实践学习知识库
+description: 系统学习 AI Agent 开发、设计和应用的完整知识库，重点突出提示词工程、上下文工程、Harness 工程
+---
+
+import { DocStatusTable } from '../src/components/DocStatusTable';
+
+# AI Agent 实践学习知识库
+
+## 项目简介
+
+本项目是一个基于 RsPress 构建的 AI Agent 知识库，旨在为学习者提供从零开始的 AI Agent 学习路径和系统化的知识整理方案。
+
+## ✨ 三大核心工程
+
+本知识库重点突出以下三大核心工程，这些是构建高质量 AI Agent 的关键：
+
+| 工程 | 描述 | 学习重点 |
+|------|------|---------|
+| **提示词工程** | 设计和优化提示词，引导 LLM 更好地推理和输出 | Zero-shot、Few-shot、Chain-of-Thought、ReAct、提示词模式 |
+| **上下文工程** | 有效管理和利用上下文窗口，构建高效的 RAG 系统 | 上下文窗口管理、检索优化、长文本处理、知识检索 |
+| **Harness 工程** | 构建工程化、可维护、可观测的 Agent 系统 | 模块化设计、管道编排、状态管理、可观测性、测试评估 |
+
+## 📚 学习路径
+
+按照以下路径系统学习 AI Agent：
+
+1. **前置知识** → 学习 AI 基础概念、LLM 基础、核心技术
+2. **Agent 基础理论** → 理解 Agent 的定义、组件、架构
+3. **提示词工程** → 掌握提示词设计和优化（核心重点）
+4. **上下文工程** → 学习 RAG 和上下文管理（核心重点）
+5. **Harness 工程** → 工程化实践（核心重点）
+6. **技术栈其他组件** → 记忆、工具、规划等
+7. **框架与工具** → LangChain、CrewAI、AutoGen 等
+8. **实战项目** → 应用所学完成项目
+9. **最佳实践** → 在项目中的实际应用指南
+
+## 📖 知识库大纲
+
+### 前置知识
+
+<DocStatusTable
+  title="前置知识"
+  storageKey="kb-prerequisite"
+  items={[
+    {
+      id: "pre-1",
+      title: "AI 基础概念",
+      description: "人工智能、机器学习、深度学习、神经网络、自然语言处理",
+      details: ["AI 定义与发展", "机器学习核心原理", "深度神经网络基础", "NLP 技术应用"],
+      filePath: "/00-前置知识/01-AI基础概念.md",
+      status: "completed"
+    },
+    {
+      id: "pre-2",
+      title: "大语言模型基础",
+      description: "Transformer、预训练、微调、上下文窗口、参数数量",
+      details: ["Transformer 架构详解", "预训练与微调", "上下文窗口管理", "Token 化"],
+      filePath: "/00-前置知识/02-大语言模型基础.md",
+      status: "completed"
+    },
+    {
+      id: "pre-3",
+      title: "核心技术介绍",
+      description: "向量嵌入、向量数据库、RAG、提示词工程、函数调用",
+      details: ["向量嵌入技术", "检索增强生成", "提示词工程简介", "函数调用机制"],
+      filePath: "/00-前置知识/03-核心技术介绍.md",
+      status: "completed"
+    },
+    {
+      id: "pre-4",
+      title: "Agent 概念入门",
+      description: "智能体、核心能力、工作流程",
+      details: ["Agent 基础概念", "核心组件", "与传统应用对比"],
+      filePath: "/00-前置知识/04-Agent概念入门.md",
+      status: "completed"
+    }
+  ]}
+/>
+
+---
+
+### 阶段一：Agent 基础理论
+
+<DocStatusTable
+  title="Agent 基础理论"
+  storageKey="kb-theory"
+  items={[
+    {
+      id: "theo-1",
+      title: "Agent 定义与核心概念",
+      description: "什么是 AI Agent、核心能力、设计原则",
+      details: ["Agent 定义与特征", "核心能力详解", "设计原则", "评估指标"],
+      filePath: "/01-Agent基础理论/01-Agent定义与核心概念.md",
+      status: "completed"
+    },
+    {
+      id: "theo-2",
+      title: "Agent 核心组件详解",
+      description: "大脑、记忆、规划、行动、工具",
+      details: ["LLM 作为大脑", "记忆系统设计", "规划与推理", "工具调用"],
+      filePath: "/01-Agent基础理论/02-Agent核心组件详解.md",
+      status: "completed"
+    },
+    {
+      id: "theo-3",
+      title: "Agent 分类与架构模式",
+      description: "单 Agent、多 Agent、分层架构、事件驱动架构",
+      details: ["架构模式对比", "多 Agent 协作原理"],
+      filePath: "/01-Agent基础理论/03-Agent分类与架构模式.md",
+      status: "completed"
+    },
+    {
+      id: "theo-4",
+      title: "多 Agent 协作原理",
+      description: "通信机制、任务分配、协调同步、冲突解决",
+      details: ["协作模式", "任务分配策略", "通信机制"],
+      filePath: "/01-Agent基础理论/04-多Agent协作原理.md",
+      status: "completed"
+    }
+  ]}
+/>
+
+---
+
+### 阶段二：提示词工程（核心重点）
+
+<DocStatusTable
+  title="提示词工程"
+  storageKey="kb-prompt"
+  items={[
+    {
+      id: "prompt-1",
+      title: "提示词基础",
+      description: "提示词重要性、基本结构、设计原则",
+      details: ["为什么提示词重要", "提示词基本结构", "设计原则"],
+      filePath: "/02-提示词工程/01-提示词基础.md",
+      status: "completed"
+    },
+    {
+      id: "prompt-2",
+      title: "核心提示词技巧",
+      description: "清晰明确、提供上下文、指定格式、分步骤",
+      details: ["指令设计", "信息提供", "输出格式", "逐步引导"],
+      filePath: "/02-提示词工程/02-核心提示词技巧.md",
+      status: "completed"
+    },
+    {
+      id: "prompt-3",
+      title: "Few-shot 学习",
+      description: "示例设计、数量影响、多样性",
+      details: ["Few-shot 原理", "示例设计原则", "最佳实践"],
+      filePath: "/02-提示词工程/03-Few-shot学习.md",
+      status: "completed"
+    },
+    {
+      id: "prompt-4",
+      title: "Chain-of-Thought 提示",
+      description: "推理引导、逐步思考、Zero-shot CoT",
+      details: ["CoT 原理", "设计方法", "变体与改进"],
+      filePath: "/02-提示词工程/04-Chain-of-Thought提示.md",
+      status: "completed"
+    },
+    {
+      id: "prompt-5",
+      title: "ReAct 模式",
+      description: "推理与行动结合、思考-行动-观察循环",
+      details: ["ReAct 原理", "提示词设计", "实际应用"],
+      filePath: "/02-提示词工程/05-ReAct模式.md",
+      status: "completed"
+    },
+    {
+      id: "prompt-6",
+      title: "提示词模式汇总",
+      description: "Zero-shot、Few-shot、CoT、ReAct、自我一致性",
+      details: ["模式对比", "适用场景", "选择指南"],
+      filePath: "/02-提示词工程/06-提示词模式汇总.md",
+      status: "completed"
+    },
+    {
+      id: "prompt-7",
+      title: "最佳实践与注意事项",
+      description: "迭代优化、A/B 测试、版本管理、可移植性、安全问题",
+      details: ["迭代优化", "测试与评估", "版本管理", "安全性"],
+      filePath: "/02-提示词工程/07-最佳实践与注意事项.md",
+      status: "completed"
+    }
+  ]}
+/>
+
+---
+
+### 阶段三：上下文工程（核心重点）
+
+<DocStatusTable
+  title="上下文工程"
+  storageKey="kb-context"
+  items={[
+    {
+      id: "ctx-1",
+      title: "上下文窗口管理",
+      description: "Token 估算、窗口限制、成本权衡",
+      details: ["窗口限制", "Token 管理", "成本优化"],
+      filePath: "/03-上下文工程/01-上下文窗口管理.md",
+      status: "completed"
+    },
+    {
+      id: "ctx-2",
+      title: "上下文构建策略",
+      description: "优先级排序、重要性前置、冗余剔除、结构化",
+      details: ["信息排序", "结构优化", "压缩策略"],
+      filePath: "/03-上下文工程/02-上下文构建策略.md",
+      status: "completed"
+    },
+    {
+      id: "ctx-3",
+      title: "RAG 详解",
+      description: "工作流程、向量数据库、分块策略、嵌入模型",
+      details: ["RAG 原理", "实现步骤", "最佳实践"],
+      filePath: "/03-上下文工程/03-RAG详解.md",
+      status: "completed"
+    },
+    {
+      id: "ctx-4",
+      title: "检索优化技术",
+      description: "相似度计算、重排序、混合检索、阈值设定",
+      details: ["检索优化", "重排序", "混合检索"],
+      filePath: "/03-上下文工程/04-检索优化技术.md",
+      status: "completed"
+    },
+    {
+      id: "ctx-5",
+      title: "上下文压缩与优化",
+      description: "抽取式摘要、抽象式摘要、关键信息提取、去重合并",
+      details: ["压缩方法", "摘要技术", "优化策略"],
+      filePath: "/03-上下文工程/05-上下文压缩与优化.md",
+      status: "completed"
+    },
+    {
+      id: "ctx-6",
+      title: "长上下文处理",
+      description: "Map-Reduce、Refine、分层摘要、滑动窗口",
+      details: ["长文本策略", "Map-Reduce 模式", "Refine 模式"],
+      filePath: "/03-上下文工程/06-长上下文处理.md",
+      status: "completed"
+    },
+    {
+      id: "ctx-7",
+      title: "最佳实践与注意事项",
+      description: "分块大小选择、嵌入维度权衡、检索质量评估、隐私保护",
+      details: ["实践建议", "常见问题", "注意事项"],
+      filePath: "/03-上下文工程/07-最佳实践与注意事项.md",
+      status: "completed"
+    }
+  ]}
+/>
+
+---
+
+### 阶段四：Harness 工程（核心重点）
+
+<DocStatusTable
+  title="Harness 工程"
+  storageKey="kb-harness"
+  items={[
+    {
+      id: "harness-1",
+      title: "模块化与组件化",
+      description: "单一职责、接口设计、依赖注入、可复用组件",
+      details: ["模块化原则", "组件设计", "依赖管理"],
+      filePath: "/04-Harness工程/01-模块化与组件化.md",
+      status: "completed"
+    },
+    {
+      id: "harness-2",
+      title: "管道编排",
+      description: "顺序链、并行链、路由链、转换链、LCEL",
+      details: ["管道模式", "LCEL", "编排工具"],
+      filePath: "/04-Harness工程/02-管道编排.md",
+      status: "completed"
+    },
+    {
+      id: "harness-3",
+      title: "状态管理与持久化",
+      description: "会话状态、Checkpoint、中间结果存储、断点续传",
+      details: ["状态管理", "持久化策略", "版本控制"],
+      filePath: "/04-Harness工程/03-状态管理与持久化.md",
+      status: "completed"
+    },
+    {
+      id: "harness-4",
+      title: "可观测性与调试",
+      description: "链路追踪、日志监控、LangSmith、性能分析",
+      details: ["追踪工具", "调试技巧", "监控指标"],
+      filePath: "/04-Harness工程/04-可观测性与调试.md",
+      status: "completed"
+    },
+    {
+      id: "harness-5",
+      title: "测试与评估",
+      description: "单元测试、集成测试、端到端评估、A/B 测试",
+      details: ["测试策略", "评估方法", "自动化框架"],
+      filePath: "/04-Harness工程/05-测试与评估.md",
+      status: "completed"
+    },
+    {
+      id: "harness-6",
+      title: "最佳实践与注意事项",
+      description: "代码组织、配置管理、部署策略、成本控制、安全",
+      details: ["工程实践", "注意事项", "持续优化"],
+      filePath: "/04-Harness工程/06-最佳实践与注意事项.md",
+      status: "completed"
+    }
+  ]}
+/>
+
+---
+
+### 后续阶段
+
+知识库还包含以下内容（待生成）：
+
+- **技术栈其他组件**：LLM 作为大脑、记忆系统设计、工具使用与调用、规划与推理能力、评价与优化方法
+- **框架与工具**：LangChain、CrewAI、AutoGen、其他框架
+- **实战项目**：代码助手 Agent、研究助手 Agent、多 Agent 工作流
+- **深入与前沿**：前沿研究、高级主题、开源贡献
+- **最佳实践**：在当前项目中与 AI Agent 配合的完整指南
+
+## 📋 评估里程碑
+
+| 阶段 | 评估标准 |
+|------|----------|
+| 前置知识 | 建立 AI 基础概念体系 |
+| 阶段一 | 解释 Agent 核心概念，画出架构图 |
+| 阶段二（提示词工程） | 设计高质量提示词模板，掌握多种提示词模式 |
+| 阶段三（上下文工程） | 构建 RAG 系统，优化检索和上下文管理 |
+| 阶段四（Harness 工程） | 构建工程化、可维护的 Agent 系统 |
+| 阶段五 | 掌握记忆、工具调用等其他技术栈组件 |
+| 阶段六 | 熟练使用至少 2 个主流框架 |
+| 阶段七 | 完成 3 个以上实战项目，分别应用三大工程 |
+| 阶段八 | 有开源贡献或前沿探索成果 |
+
+## 🎯 在当前项目中的应用
+
+本知识库特别强调如何在你的项目中与 AI Agent 配合：
+
+| 方面 | 应用指南 |
+|------|---------|
+| **提示词工程实践** | 结构化提示词模板、版本管理、A/B 测试、提示词审查机制 |
+| **上下文工程实践** | 合理分块、检索优化、上下文更新、隐私保护 |
+| **Harness 工程实践** | 模块化设计、可观测性集成、自动化测试、配置管理 |
+| **协作流程** | 任务分解、代码审查、文档生成、持续优化 |
+| **注意事项** | 成本控制、质量保障、安全风险、性能优化 |
+
+详细内容请参考 **最佳实践** 章节。
+
+## 💡 提示与技巧
+
+- 从 **前置知识** 开始，循序渐进
+- 重点学习 **提示词工程、上下文工程、Harness 工程** 三大核心
+- 边学习边实践，完成每个阶段的实战任务
+- 收集自己的提示词模板和最佳实践
+- 关注可观测性和可维护性，构建工程化系统
+
+:::tip
+让我们一起构建一个全面、准确、易于理解的 AI Agent 知识库！
+:::

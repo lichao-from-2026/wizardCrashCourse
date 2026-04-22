@@ -1,0 +1,22 @@
+{
+  "name": "ai-agent-knowledge-base",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Agent 实践学习知识库",
+  "scripts": {
+    "dev": "rspress dev",
+    "build": "rspress build",
+    "preview": "rspress preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@rspress/plugin-llms": "^2.0.9",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "rspress": "^2.0.0-beta.21",
+    "typescript": "^5.0.0"
+  }
+}

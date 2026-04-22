@@ -316,15 +316,218 @@ import { DocStatusTable } from '../src/components/DocStatusTable';
 
 ---
 
-### 后续阶段
+### 阶段五：技术栈其他组件
 
-知识库还包含以下内容（待生成）：
+<DocStatusTable
+  title="技术栈其他组件"
+  storageKey="kb-stack"
+  items={[
+    {
+      id: "stack-1",
+      title: "LLM 作为 Agent 大脑",
+      description: "模型选择、参数配置、多模型策略",
+      details: ["模型选择", "参数优化", "降级方案"],
+      filePath: "/05-技术栈其他组件/01-LLM作为Agent大脑.md",
+      status: "completed"
+    },
+    {
+      id: "stack-2",
+      title: "记忆系统设计",
+      description: "短期/长期记忆、存储方案、检索策略",
+      details: ["记忆层次", "存储方案", "检索策略"],
+      filePath: "/05-技术栈其他组件/02-记忆系统设计.md",
+      status: "completed"
+    },
+    {
+      id: "stack-3",
+      title: "工具使用与调用",
+      description: "工具设计、调用流程、安全控制",
+      details: ["工具设计", "调用流程", "安全实践"],
+      filePath: "/05-技术栈其他组件/03-工具使用与调用.md",
+      status: "completed"
+    },
+    {
+      id: "stack-4",
+      title: "规划与推理能力",
+      description: "任务分解、推理模式、计划修正",
+      details: ["任务分解", "推理模式", "动态调整"],
+      filePath: "/05-技术栈其他组件/04-规划与推理能力.md",
+      status: "completed"
+    },
+    {
+      id: "stack-5",
+      title: "评价与优化方法",
+      description: "评估指标、评估方法、优化策略、A/B 测试",
+      details: ["评估指标", "评估方法", "持续优化"],
+      filePath: "/05-技术栈其他组件/05-评价与优化方法.md",
+      status: "completed"
+    }
+  ]}
+/>
 
-- **技术栈其他组件**：LLM 作为大脑、记忆系统设计、工具使用与调用、规划与推理能力、评价与优化方法
-- **框架与工具**：LangChain、CrewAI、AutoGen、其他框架
-- **实战项目**：代码助手 Agent、研究助手 Agent、多 Agent 工作流
-- **深入与前沿**：前沿研究、高级主题、开源贡献
-- **最佳实践**：在当前项目中与 AI Agent 配合的完整指南
+---
+
+### 阶段六：框架与工具
+
+<DocStatusTable
+  title="框架与工具"
+  storageKey="kb-frameworks"
+  items={[
+    {
+      id: "framework-1",
+      title: "LangChain",
+      description: "最流行的 LLM 应用开发框架",
+      details: ["核心概念", "生态系统", "适用场景"],
+      filePath: "/06-框架与工具/01-LangChain.md",
+      status: "completed"
+    },
+    {
+      id: "framework-2",
+      title: "CrewAI",
+      description: "专注于多 Agent 协作的框架",
+      details: ["核心概念", "特点优势", "适用场景"],
+      filePath: "/06-框架与工具/02-CrewAI.md",
+      status: "completed"
+    },
+    {
+      id: "framework-3",
+      title: "AutoGen",
+      description: "Microsoft 开发的多 Agent 框架",
+      details: ["核心概念", "特点优势", "适用场景"],
+      filePath: "/06-框架与工具/03-AutoGen.md",
+      status: "completed"
+    },
+    {
+      id: "framework-4",
+      title: "其他框架",
+      description: "LlamaIndex、Semantic Kernel、自定义框架",
+      details: ["其他框架", "选择建议"],
+      filePath: "/06-框架与工具/04-其他框架.md",
+      status: "completed"
+    }
+  ]}
+/>
+
+---
+
+### 阶段七：应用场景与实战项目
+
+<DocStatusTable
+  title="应用场景与实战项目"
+  storageKey="kb-projects"
+  items={[
+    {
+      id: "project-1",
+      title: "项目一：代码助手 Agent",
+      description: "帮助开发者写代码、解释代码、审查代码",
+      details: ["功能设计", "技术要点", "实现思路"],
+      filePath: "/07-应用场景与实战项目/01-项目一代码助手Agent.md",
+      status: "completed"
+    },
+    {
+      id: "project-2",
+      title: "项目二：研究助手 Agent",
+      description: "帮助做研究、查资料、整理信息",
+      details: ["功能设计", "技术要点", "实现思路"],
+      filePath: "/07-应用场景与实战项目/02-项目二研究助手Agent.md",
+      status: "completed"
+    },
+    {
+      id: "project-3",
+      title: "项目三：多 Agent 工作流",
+      description: "多个 Agent 协作完成复杂任务",
+      details: ["场景设计", "技术要点", "实现思路"],
+      filePath: "/07-应用场景与实战项目/03-项目三多Agent工作流.md",
+      status: "completed"
+    }
+  ]}
+/>
+
+---
+
+### 阶段八：深入与前沿
+
+<DocStatusTable
+  title="深入与前沿"
+  storageKey="kb-advanced"
+  items={[
+    {
+      id: "adv-1",
+      title: "前沿研究",
+      description: "Agent 领域的最新研究方向和热门话题",
+      details: ["热门方向", "关注建议"],
+      filePath: "/08-深入与前沿/01-前沿研究.md",
+      status: "completed"
+    },
+    {
+      id: "adv-2",
+      title: "高级主题",
+      description: "Agent 开发中的高级技术话题",
+      details: ["主题列表"],
+      filePath: "/08-深入与前沿/02-高级主题.md",
+      status: "completed"
+    },
+    {
+      id: "adv-3",
+      title: "开源贡献",
+      description: "如何参与 Agent 开源项目",
+      details: ["如何贡献"],
+      filePath: "/08-深入与前沿/03-开源贡献.md",
+      status: "completed"
+    }
+  ]}
+/>
+
+---
+
+### 阶段九：最佳实践
+
+<DocStatusTable
+  title="最佳实践"
+  storageKey="kb-best-practices"
+  items={[
+    {
+      id: "bp-1",
+      title: "提示词工程实践",
+      description: "提示词工程的实战经验总结",
+      details: ["核心要点"],
+      filePath: "/09-最佳实践/01-提示词工程实践.md",
+      status: "completed"
+    },
+    {
+      id: "bp-2",
+      title: "上下文工程实践",
+      description: "上下文工程的实战经验总结",
+      details: ["核心要点"],
+      filePath: "/09-最佳实践/02-上下文工程实践.md",
+      status: "completed"
+    },
+    {
+      id: "bp-3",
+      title: "Harness 工程实践",
+      description: "Harness 工程的实战经验总结",
+      details: ["核心要点"],
+      filePath: "/09-最佳实践/03-Harness工程实践.md",
+      status: "completed"
+    },
+    {
+      id: "bp-4",
+      title: "协作流程",
+      description: "团队中如何与 Agent 协作",
+      details: ["核心要点"],
+      filePath: "/09-最佳实践/04-协作流程.md",
+      status: "completed"
+    },
+    {
+      id: "bp-5",
+      title: "注意事项",
+      description: "使用 Agent 时需要注意的安全和伦理问题",
+      details: ["核心要点"],
+      filePath: "/09-最佳实践/05-注意事项.md",
+      status: "completed"
+    }
+  ]}
+/>
 
 ## 📋 评估里程碑
 

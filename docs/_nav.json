@@ -145,6 +145,36 @@
       {
         "text": "最佳实践与注意事项",
         "link": "/04-Harness工程/06-最佳实践与注意事项"
+      },
+      {
+        "text": "R3F与Drei教程",
+        "link": "/04-Harness工程/07-R3F与Drei教程/",
+        "items": [
+          {
+            "text": "R3F与Drei实战教程项目",
+            "link": "/04-Harness工程/07-R3F与Drei教程/01-R3F与Drei实战教程项目"
+          },
+          {
+            "text": "环境搭建与项目初始化",
+            "link": "/04-Harness工程/07-R3F与Drei教程/02-环境搭建与项目初始化"
+          },
+          {
+            "text": "R3F基础概念与核心原理",
+            "link": "/04-Harness工程/07-R3F与Drei教程/03-R3F基础概念与核心原理"
+          },
+          {
+            "text": "drei组件详解",
+            "link": "/04-Harness工程/07-R3F与Drei教程/04-drei组件详解"
+          },
+          {
+            "text": "实战案例与性能优化",
+            "link": "/04-Harness工程/07-R3F与Drei教程/05-实战案例与性能优化"
+          },
+          {
+            "text": "Harness工程方法论应用指南",
+            "link": "/04-Harness工程/07-R3F与Drei教程/06-Harness工程方法论应用指南"
+          }
+        ]
       }
     ]
   },

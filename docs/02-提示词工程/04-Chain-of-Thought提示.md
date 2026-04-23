@@ -226,7 +226,6 @@ D. [选项D]
 
 ### 5.3 代码调试
 
-```
 问题：这段代码有什么问题？
 
 代码：
@@ -260,7 +259,7 @@ def calculate_average(numbers):
         total += num
     return total / len(numbers)
 ```
-```
+
 
 ## 6. 在当前项目中的应用
 

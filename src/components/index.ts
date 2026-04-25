@@ -6,7 +6,11 @@
  */
 
 // 导出 DocStatusTable 组件及其相关内容
-export * from './DocStatusTable';
+export { DocStatusTable, default as DocStatusTableDefault } from './DocStatusTable';
+export type { DocStatusItem, DocStatusTableProps, DocStatus } from './DocStatusTable';
+export { useDocStatusTable } from './DocStatusTable';
 
 // 导出 StatusSelector 组件及其相关内容
-export * from './StatusSelector';
+export { StatusSelector, default as StatusSelectorDefault } from './StatusSelector';
+export type { StatusItem, StatusSelectorProps, StatusType } from './StatusSelector';
+export { useStatusSelector } from './StatusSelector';

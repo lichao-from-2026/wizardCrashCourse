@@ -2,10 +2,10 @@
  * 状态选择器 Hook
  * 描述：封装 StatusSelector 组件的状态管理和业务逻辑
  * 作者：AI Assistant
- * 日期：2026-04-22
+ * 日期：2026-04-27
  */
 import { useState, useEffect } from 'react';
-import type { StatusItem, StatusType, StatusSelectorProps } from './types'; // 导入类型定义
+import type { StatusItem, StatusType, StatusSelectorProps } from '../../types/doc-status'; // 导入全局类型
 
 /**
  * 状态循环顺序

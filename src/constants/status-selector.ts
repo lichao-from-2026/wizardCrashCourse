@@ -1,10 +1,10 @@
 /**
- * 状态选择器常量
- * 描述：定义 StatusSelector 组件使用的常量和配置
+ * 状态选择器相关常量
+ * 描述：定义状态选择器显示文本、图标和颜色等配置
  * 作者：AI Assistant
- * 日期：2026-04-22
+ * 日期：2026-04-27
  */
-import type { StatusType } from './types'; // 导入状态类型
+import type { StatusType } from '../types/doc-status';
 
 /**
  * 状态配置

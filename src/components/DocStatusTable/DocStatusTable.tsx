@@ -2,12 +2,12 @@
  * 文档状态表格组件
  * 描述：显示文档状态列表，支持状态切换和详情展开
  * 作者：AI Assistant
- * 日期：2026-04-22
+ * 日期：2026-04-27
  */
 import React from 'react';
-import type { DocStatusTableProps } from './types'; // 导入组件属性类型
+import type { DocStatusTableProps } from '../../types/doc-status'; // 导入全局类型
 import { useDocStatusTable } from './hooks'; // 导入组件专用 Hook
-import { statusConfig } from './constants'; // 导入状态配置
+import { docStatusConfig as statusConfig } from '../../constants/doc-status'; // 导入全局常量
 import styles from './DocStatusTable.module.css'; // 导入组件样式
 
 /**

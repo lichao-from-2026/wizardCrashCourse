@@ -2,12 +2,12 @@
  * 状态选择器组件
  * 描述：显示学习进度和状态切换界面
  * 作者：AI Assistant
- * 日期：2026-04-22
+ * 日期：2026-04-27
  */
 import React from 'react';
-import type { StatusSelectorProps } from './types'; // 导入组件属性类型
+import type { StatusSelectorProps } from '../../types/doc-status'; // 导入全局类型
 import { useStatusSelector } from './hooks'; // 导入组件专用 Hook
-import { statusConfig } from './constants'; // 导入状态配置
+import { statusSelectorConfig as statusConfig } from '../../constants/status-selector'; // 导入全局常量
 import styles from './StatusSelector.module.css'; // 导入组件样式
 
 /**

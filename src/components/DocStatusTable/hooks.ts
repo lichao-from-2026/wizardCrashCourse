@@ -2,10 +2,10 @@
  * 文档状态表格 Hook
  * 描述：封装 DocStatusTable 组件的状态管理和业务逻辑
  * 作者：AI Assistant
- * 日期：2026-04-22
+ * 日期：2026-04-27
  */
 import { useState, useEffect, useCallback } from 'react';
-import type { DocStatusItem, DocStatus, DocStatusTableProps } from './types'; // 导入类型定义
+import type { DocStatusItem, DocStatus, DocStatusTableProps } from '../../types/doc-status'; // 导入全局类型
 
 /**
  * 状态循环顺序

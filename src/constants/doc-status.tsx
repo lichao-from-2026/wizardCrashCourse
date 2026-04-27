@@ -1,11 +1,11 @@
 /**
- * 文档状态表格常量
- * 描述：定义 DocStatusTable 组件使用的常量和配置
+ * 文档状态相关常量
+ * 描述：定义文档状态显示文本、图标和颜色等配置
  * 作者：AI Assistant
- * 日期：2026-04-22
+ * 日期：2026-04-27
  */
 import React from 'react';
-import type { DocStatus } from './types'; // 导入状态类型
+import type { DocStatus } from '../types/doc-status';
 
 /**
  * 状态配置
